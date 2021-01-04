@@ -16,7 +16,7 @@
         <div class="nav-search">
             <el-row :gutter="20">
                 <el-col :span="12" :offset="6" class="nav-search-item">
-                    <el-input v-model="input" clearable></el-input> <el-button type="primary" icon="el-icon-search" @click="search">搜索</el-button>
+                    <el-input v-model="input" clearable @change="search"></el-input> <el-button type="primary" icon="el-icon-search" @click="search">搜索</el-button>
                 </el-col>
             </el-row>
         </div>
@@ -147,11 +147,8 @@
             },
             methods:{
                 search(){
-                    this.$message({
-                        message:this.input,
-                        type: 'success'
-                    });
-                }
+                    window.open("https://www.baidu.com/s?wd="+this.input)
+                }                
             }
         })
     </script>
