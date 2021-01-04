@@ -147,6 +147,9 @@
             },
             methods:{
                 search(){
+                    if(this.input === ""){
+                        return false
+                    }
                     window.open("https://www.baidu.com/s?wd="+this.input)
                 }                
             }
