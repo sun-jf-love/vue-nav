@@ -16,7 +16,7 @@
         <div class="nav-search">
             <el-row :gutter="20">
                 <el-col :span="12" :offset="6" class="nav-search-item">
-                    <el-input v-model="input" clearable @change="search"></el-input> <el-button type="primary" icon="el-icon-search" @click="search">搜索</el-button>
+                    <el-input class="search-input" v-model="input" clearable @change="search"></el-input> <el-button class="search-button" type="primary" icon="el-icon-search" @click="search">搜索</el-button>
                 </el-col>
             </el-row>
         </div>
@@ -50,7 +50,7 @@
                     },
 					{
                         url:"http://kaoqin.ruidnet.com",
-                        icon:"image/kaoqin.png",
+                        icon:"image/dingding.png",
                         title:"kaoqin"
                     },
                     {
@@ -172,6 +172,17 @@
         flex-direction: row;
         flex-wrap: wrap;        
     }
+	
+	.el-input__inner{
+		border-top-right-radius: 0px;
+		border-bottom-right-radius: 0px;
+	}
+	
+	.search-button{
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
     .content-item{
         overflow:hidden;
         display: inline-block;
